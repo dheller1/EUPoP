@@ -1,0 +1,69 @@
+﻿<Page
+	x:Class="EUPoP.Pages.Terms.NprInvasions"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:local="clr-namespace:EUPoP.Pages.Terms"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	Title="NPR Invasions"
+	d:DesignHeight="450"
+	d:DesignWidth="800"
+	mc:Ignorable="d">
+
+	<Page.Resources>
+		<ResourceDictionary Source="/Resources/LocalResources.xaml" />
+	</Page.Resources>
+
+	<Viewbox MaxWidth="800" VerticalAlignment="Top">
+		<StackPanel Orientation="Vertical">
+			<Label Content="NPR Invasions" Style="{StaticResource HeaderLabelStyle}" />
+			<Label Content="0. Check conditions" Style="{StaticResource SubHeaderLabelStyle}" />
+			<Label Style="{StaticResource TextLabelStyle}">
+				<TextBlock>
+					<Run>- NPRs at war with any Player Realm(s)</Run><LineBreak />
+					<Run>-</Run> <Run TextDecorations="Underline">not</Run> <Run>Active Ally of any PR</Run><LineBreak />
+					<Run>- NPR or its Vassal own Province(s) in any Area without Hostile Units</Run><LineBreak />
+					<Run>- has adjacent</Run> <Run FontStyle="Italic">Eligible Invasion Target Area</Run>
+				</TextBlock>
+			</Label>
+
+			<Label Content="Eligible Invasion Target Area" Style="{StaticResource SubSubHeaderLabelStyle}" />
+			<Label Style="{StaticResource TextLabelStyle}">
+				<TextBlock>
+					<Run>- contains 1+ Provinces belonging to hostile PR or its Vassal</Run><LineBreak />
+					<Run>- ineligible if only adjacent by Sea through Hostile sea zones</Run><LineBreak />
+					<Run>- ineligible if Area contains non-hostile PR Units</Run>
+				</TextBlock>
+			</Label>
+
+			<Label Content="1. Choose target" Style="{StaticResource SubHeaderLabelStyle}" />
+			<Label Style="{StaticResource TextLabelStyle}">
+				<TextBlock>
+					<Run>If multiple targets are eligible, prefer</Run><LineBreak />
+					<Run>1. NPR's own Capital Area</Run><LineBreak />
+					<Run>2. Area with most NPR Core Provinces</Run><LineBreak />
+					<Run>3. Area adjacent by Land</Run><LineBreak />
+					<Run>4. Random selection</Run>
+				</TextBlock>
+			</Label>
+
+			<Label Content="2. Add Unrest" Style="{StaticResource SubHeaderLabelStyle}" />
+			<Label Style="{StaticResource TextLabelStyle}">
+				<TextBlock>
+					<Run>- add Unrest to 2 Provinces</Run><LineBreak />
+					<Run>- owned by Hostile PR or its Vassal</Run><LineBreak />
+					<Run>- pick alphabetically</Run>
+				</TextBlock>
+			</Label>
+
+			<Label Content="3. Place Units" Style="{StaticResource SubHeaderLabelStyle}" />
+			<Label Style="{StaticResource TextLabelStyle}">
+				<TextBlock>
+					<Run>- calculate NPR Strength without Areas with Hostile Units</Run><LineBreak />
+					<Run>- add ½ times that </Run><LineBreak />
+					<Run>- pick alphabetically</Run>
+				</TextBlock>
+			</Label>
+		</StackPanel>
+	</Viewbox>
+</Page>

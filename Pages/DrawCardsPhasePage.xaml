@@ -1,0 +1,47 @@
+﻿<Page
+	x:Class="EUPoP.Pages.DrawCardsPhasePage"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:local="clr-namespace:EUPoP"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	Title="1. Draw Cards Phase"
+	d:DesignHeight="450"
+	d:DesignWidth="800"
+	mc:Ignorable="d">
+
+	<Page.Resources>
+		<ResourceDictionary Source="/Resources/LocalResources.xaml" />
+	</Page.Resources>
+
+	<Viewbox MaxWidth="800" VerticalAlignment="Top">
+		<StackPanel Orientation="Vertical">
+			<Label Content="1. Draw Cards Phase" Style="{StaticResource HeaderLabelStyle}" />
+			<Label Content="A. Reveal Events" Style="{StaticResource SubHeaderLabelStyle}" />
+			<Label Style="{StaticResource TextLabelStyle}">
+				<TextBlock>
+					<Run>- draw #Players + 1 event cards</Run><LineBreak />
+					<Run>- flip first 3 cards</Run>
+				</TextBlock>
+			</Label>
+
+			<Label Content="B. Draw Action Cards" Style="{StaticResource SubHeaderLabelStyle}" />
+
+			<Label Style="{StaticResource TextLabelStyle}">
+				<TextBlock>
+					<Run>- each player draws 3 cards from any deck (ADM/DIP/MIL)</Run><LineBreak />
+					<Run>- may draw one by one</Run>
+				</TextBlock>
+			</Label>
+
+			<Label Content="C. Pay to keep Action Cards" Style="{StaticResource SubHeaderLabelStyle}" />
+			<Label Style="{StaticResource TextLabelStyle}">- pay 2(d) for each card to keep it, or discard it</Label>
+
+			<Label Content="D. Pick/Replace Missions" Style="{StaticResource SubHeaderLabelStyle}" />
+			<Label Style="{StaticResource TextLabelStyle}">- pick/replace any missions, keep 2 missions in hand</Label>
+			<StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+				<TextBlock HorizontalAlignment="Center" FontSize="16"><Hyperlink NavigateUri="ActionPhasePage.xaml">next</Hyperlink></TextBlock>
+			</StackPanel>
+		</StackPanel>
+	</Viewbox>
+</Page>

@@ -1,0 +1,58 @@
+﻿<Page
+	x:Class="EUPoP.Pages.PeaceRebelsPhasePage"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:local="clr-namespace:EUPoP"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	Title="1. Draw Cards Phase"
+	d:DesignHeight="450"
+	d:DesignWidth="800"
+	mc:Ignorable="d">
+
+	<Page.Resources>
+		<ResourceDictionary Source="/Resources/LocalResources.xaml" />
+	</Page.Resources>
+
+	<Viewbox MaxWidth="800" VerticalAlignment="Top">
+		<StackPanel Orientation="Vertical">
+			<Label Content="3. Peace &amp; Rebels Phase" Style="{StaticResource HeaderLabelStyle}" />
+			<Label Content="A. Remove Casus Belli and Truces" Style="{StaticResource SubHeaderLabelStyle}" />
+			<Label Style="{StaticResource TextLabelStyle}">
+				<TextBlock>
+					<Run>- remove all Truce and CB tokens</Run><LineBreak />
+					<Run>- players removing CB tokens lose 2 Prestige if not at war with the respective Realm</Run>
+				</TextBlock>
+			</Label>
+
+			<Label Style="{StaticResource SubHeaderLabelStyle}">
+				<TextBlock>
+					<Run>B.</Run> <Hyperlink NavigateUri="Terms/NprInvasionsNew.xaml">NPR Invasions</Hyperlink>
+				</TextBlock>
+			</Label>
+			<Label Style="{StaticResource TextLabelStyle}">
+				<TextBlock>
+					<Run>NPR invades if:</Run><LineBreak />
+					<Run>i) at war with any PR(s)</Run><LineBreak />
+					<Run>ii) not an Active Ally</Run><LineBreak />
+					<Run>iii) no Area where NPR controls province contains Hostile Units</Run><LineBreak />
+				</TextBlock>
+			</Label>
+
+			<Label Style="{StaticResource SubHeaderLabelStyle}">
+				<TextBlock>
+					C. Rebels Siege<Run TextDecorations="Underline">or</Run>
+					Move</TextBlock>
+			</Label>
+			<!--<Label Style="{StaticResource TextLabelStyle}">- pay 2(d) for each card to keep it, or discard it</Label>-->
+
+			<Label Content="D. Peace Resolution" Style="{StaticResource SubHeaderLabelStyle}" />
+			<!--<Label Style="{StaticResource TextLabelStyle}">- pick/replace any missions, keep 2 missions in hand</Label>-->
+
+
+			<StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+				<TextBlock HorizontalAlignment="Center" FontSize="16"><Hyperlink NavigateUri="ActionPhasePage.xaml">back</Hyperlink></TextBlock>
+			</StackPanel>
+		</StackPanel>
+	</Viewbox>
+</Page>

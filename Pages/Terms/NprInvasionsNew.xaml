@@ -1,0 +1,94 @@
+﻿<Page
+	x:Class="EUPoP.Pages.Terms.NprInvasionsNew"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:local="clr-namespace:EUPoP.Pages.Terms"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	Title="NPR Invasions"
+	d:DesignHeight="450"
+	d:DesignWidth="800"
+	mc:Ignorable="d">
+
+	<Page.Resources>
+		<ResourceDictionary Source="/Resources/LocalResources.xaml" />
+	</Page.Resources>
+
+	<FlowDocumentPageViewer>
+		<FlowDocument>
+			<Section>
+				<Paragraph Style="{StaticResource P_Title}">NPR Invasions</Paragraph>
+				<Paragraph>
+					If an NPR is at War with any Player Realm(s) during Phase 3, Step B, the player(s) may face
+					an Invasion from that NPR. Resolve NPRs in alphabetical order. If all 3 of the criteria below 
+					are satisfied, an Invasion will take place:</Paragraph>
+				<List>
+					<ListItem>
+						<Paragraph>The NPR is not an Active Ally of any PR.</Paragraph>
+					</ListItem>
+					<ListItem>
+						<Paragraph>The NPR or any of its Vassals currently Owns Provinces in 1+ Areas that contain
+							no Units Hostile to that NPR.</Paragraph>
+					</ListItem>
+					<ListItem>
+						<Section>
+							<Paragraph>There is at least 1 eligible Invasion target Area adjacent to the NPR:</Paragraph>
+							<List>
+								<ListItem>
+									<Paragraph>The target Area must contain a Town/Vassal belonging to a PR Hostile to the NPR
+										(any of NPR's de jure Provinces that are Occupied by an Enemy qualify).</Paragraph>
+								</ListItem>
+								<ListItem>
+									<Paragraph>Areas are ineligible if they are adjacent by Sea (and not by Land) only 
+										through Sea Zones that are Hostile to the NPR.</Paragraph>
+								</ListItem>
+								<ListItem>
+									<Paragraph>Areas are ineligible if they contain Units that belong to a PR which is
+										not at War with the NPR.</Paragraph>
+								</ListItem>
+							</List>
+						</Section>
+					</ListItem>
+				</List>
+				<Paragraph>
+					Each Invasion follows the sequence below:</Paragraph>
+				<List MarkerStyle="Decimal" FontWeight="Bold">
+					<ListItem>
+						<Section FontWeight="Normal">
+							<Paragraph>If there are 2+ eligible adjacent Areas, pick (in order of priority):</Paragraph>
+							<List MarkerStyle="Decimal">
+								<ListItem>
+									<Paragraph>The NPR's own Capital Area.</Paragraph>
+								</ListItem>
+								<ListItem>
+									<Paragraph>The Area with the most of the NPR's Core Provinces.</Paragraph>
+								</ListItem>
+								<ListItem>
+									<Paragraph>An Area adjacent by Land to the NPR.</Paragraph>
+								</ListItem>
+								<ListItem>
+									<Paragraph>A randomly selected adjacent Area.</Paragraph>
+								</ListItem>
+							</List>
+						</Section>
+					</ListItem>
+					<ListItem>
+						<Paragraph FontWeight="Normal">In the selected Area, add Unrest to 2 Towns/Vassals belonging to players at War with
+							the NPR (pick Provinces alphabetically).</Paragraph>
+					</ListItem>
+					<ListItem>
+						<Paragraph FontWeight="Normal">Place NPR Units there equal to ½ of the current NPR Strength, ignoring Provinces
+							in Areas with Units Hostile to the NPR.</Paragraph>
+					</ListItem>
+					<ListItem>
+						<Paragraph FontWeight="Normal">Resolve Battle immediately if there are any Military Units in the invaded Area,
+							following the normal rules for NPRs.</Paragraph>
+					</ListItem>
+					<ListItem>
+						<Paragraph FontWeight="Normal">From this point onwards, these NPR Units behave as Rebels.</Paragraph>
+					</ListItem>
+				</List>
+			</Section>
+		</FlowDocument>
+	</FlowDocumentPageViewer>
+</Page>
